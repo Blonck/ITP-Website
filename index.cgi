@@ -1,4 +1,4 @@
-#!/home/mueller/env/bin/python 
+#! python
 import wsgiref.handlers
 from route import app
 

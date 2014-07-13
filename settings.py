@@ -16,7 +16,7 @@ photo = "static/blank.jpg"
 root = "/home/" + login + "/www/"
 # define the root of the web path
 # IMPORTANT: make sure this ends with a slash!
-base = "http://www.physik.uni-leipzig.de/~" + login + "/index.cgi/"
+base = "https://www.physik.uni-leipzig.de/~" + login + "/index.cgi/"
 
 # title of the page
 title = u"{0}".format(name)
@@ -29,6 +29,8 @@ title = u"{0}".format(name)
 # I don't fully understand our server configuration. It turned out that naming
 # a link 'index' or 'publications' did not work
 navigation = [
-    ('About' ,'about'),
-    ('Publication','published'), # don't name this publications -- gets you back to the itp...
+    ('About', 'about'),
+    ('Publication', 'published'), # don't name this publications -- gets you back to the itp...
+    ('Personal', 'personal'),
+    ('Vim', 'vim'),
     ]

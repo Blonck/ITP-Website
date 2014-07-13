@@ -16,7 +16,8 @@ photo = "static/blank.jpg"
 root = "/home/" + login + "/www/"
 # define the root of the web path
 # IMPORTANT: make sure this ends with a slash!
-base = "https://www.physik.uni-leipzig.de/~" + login + "/index.cgi/"
+#base = "https://www.physik.uni-leipzig.de/~" + login + "/index.cgi/"
+base = "http://localhost:5000/"
 
 # title of the page
 title = u"{0}".format(name)
@@ -33,4 +34,5 @@ navigation = [
     ('Publication', 'published'), # don't name this publications -- gets you back to the itp...
     ('Personal', 'personal'),
     ('Vim', 'vim'),
+    ('Blog', 'blog'),
     ]

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <!-- YOUR PUBLIC WWW PATH here -->
+        <base href="{{ settings.base }}"/>
+
+        <!-- YOUR NAME here -->
+        <title>{{ settings.name }}</title>
+
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='cqt.css') }}" />
+    </head>
+
+    <body>
+
+        <!-- ITP Header starts here--> 
+        <div id="header">
+            <div id="uni"><a href="http://www.uni-leipzig.de" target="_top"><img src="http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/uni_logo.gif" alt="Universität Leipzig" border="0" /></a></div>
+            <div id="link_cqt_new"><a href="http://www.physik.uni-leipzig.de/index.php?id=22"><img src="{{ url_for('static', filename='cqt_new_web.png') }}" alt="Computational Quantum Field Theory" /></a></div>
+            <div id="link_itp"><a href="http://www.physik.uni-leipzig.de/"><img src="http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/itp_logo.gif" alt="" /></a></div>
+            <h1 id="title"><a href="http://www.physik.uni-leipzig.de/">Institut für Theoretische Physik</a></h1>
+            <h1 id="subtitle"><a href="http://www.physik.uni-leipzig.de/index.php?id=22">Computational Quantum Field Theory</a></h1>
+
+            <!-- YOUR NAME here (optionally "YOUR NAME / SUB PAGE") -->
+            <div id="rootline"><b>{{ settings.name }}</b></div> 
+        </div>
+
+
+        <!-- the main page starts here -->
+        <div id="page">
+            <!-- embedded NAVIGATION BOX starts here -->
+            <!-- 3 layers of navigation: set the class parameter to one of "link1"/"link2"/"link3"/"link1-act"/"link2-act"/"link3-act" -->
+            <div id="navi">
+                <ul>
+                {% for caption, href in settings.navigation %}
+                    {% if href == current %}
+                        <li class='link1-act'><a href="{{ href }}">{{ caption }}</a></li>
+                    {% else %}
+                        <li class='link1'><a href="{{ href }}">{{ caption }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+            <!-- embedded navigation box ends here -->
+            {% if current == 'about' %}
+            <div id="photo"><img src="{{ settings.photo }}" alt=""/></div>
+            {% endif %}
+            <!-- MAIN CONTENT STARTS HERE -->
+            <div id="content">
+                {% block body %}{% endblock %}
+            </div>
+            <!-- main content ends here -->
+        </div>
+    </body>
+</html>

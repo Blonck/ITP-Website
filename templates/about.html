@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<!-- ABOUT -->
+<h3>About</h3>
+<p>
+I am a doctoral student in the CQT group of the Theoretical Physics Institute at the University Leipzig. 
+</p>
+<p>
+In my diploma thesis I investigatet an advanced algorithm for spin systems, the so called worm algorithm.
+At the moment I am interested in the behavior of coarse grained polymer model in a confined environment.
+</p>
+<!-- CONTACT -->
+<h3>Contact</h3>
+<p>
+email: <a href="mailto:{{ settings.email }}">{{ settings.email }}</a> (<a href="static/marenz@itp.uni-leipzig.de.asc">PGP key</a>)</br>
+Phone: {{ settings.phone }}<br/>
+Room: {{ settings.room }} <br/>
+Institut für Theoretische Physik<br/>
+Universität Leipzig<br/>
+Postfach 100 920<br/>
+D-04109 Leipzig, Germany<br/>
+</p>
+{% endblock %}

@@ -1,0 +1,481 @@
+.unvis{
+	display:none;
+}
+
+/********************************************/
+/* Elemente zur Gliederung der Seite: */
+/********************************************/
+body {
+	margin: 0;
+	padding: 0;
+	background-color : #e5e5e5;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:center;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/hg_weiss.gif);
+	background-repeat: repeat-y;
+	background-position: center;
+}
+
+/* Kopf mit Logo  usw.*/
+#header {
+	background-color: #0099FF;
+	width:770px;
+	height: 150px;
+	vertical-align: top;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/kopf.jpg);
+	position: static;
+	margin:auto;
+	text-align: left;
+}
+
+  /*für UNI-Logo:, Elternelement ist HEADER*/
+#uni {
+	height: 27px;
+	width: 192px;
+	border: none;
+	overflow: hidden;
+}
+
+#link_itp {
+	position: absolute;
+	height: 70px;
+	width: 200px;
+	top: 35px;
+	text-align: right;
+	z-index: 1
+}
+
+#link_cqt_new {
+    position: relative; 
+    left: 590px;
+    width: 240px;
+    height: 90px;
+    text-align: left;
+    z-index: 1
+}
+
+#link_cqt_new IMG {
+    position: absolute;
+    top: -30px;
+	width: 240px;
+	height: 90px;
+	border: 0px;
+}
+#link_cqt {
+    position: relative; 
+    left: 660px;
+    top: 0px;
+    text-align: left;
+    z-index: 1
+}
+
+#link_cqt IMG {
+	width: 90px;
+	height: 110px;
+	border: 0px;
+}
+
+#title {/*Institut fuer Theoretische Physik */
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: normal;
+    padding-left: 210px;
+    position: absolute;
+    top: 10px;
+}
+
+#title A {
+	text-decoration: none;
+	color: #CCDFFF;
+}
+
+#subtitle {/* Computational Quantum Field Theory */
+    font-size:21px;
+    line-height: 40px;
+    font-weight: normal;
+    padding-left: 210px;
+    position: absolute;
+    top: 35px;
+}
+
+#subtitle A {
+    text-decoration: none;
+	color: #CCDFFF;
+}
+
+#pagetitle {
+	position: absolute;
+	height: 18px;
+	top: 110px;
+	font-size: 12px;
+	padding-left:6px;
+}
+
+#rootline {
+	position: absolute;
+	width: 585px;
+	height:22px;
+	top: 128px;
+	font-size: 12px;
+	line-height:21px;
+	background-color : #99CCFF;
+	padding-left:6px;
+}
+
+#rootline A {
+	text-decoration: none;
+	color: #000000;
+}
+
+
+/********************************/
+/* Frames, spacing, link-to-top */
+/********************************/
+/*Seiteninhalt mit Druckversion und Seite empfehlen*/
+#page {
+	text-align: left;
+	width:770px;
+	background-color: #FFFFFF;
+	margin:auto;
+	position: static;
+	overflow: visible;
+}
+
+#content {
+    position: absolute;
+    width: 540px;
+    margin-left: 206px;
+    padding-top: 15px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+#navi {
+    float:left;
+    width: 185px;
+    margin-top: 16px;
+    margin-left: 6px;
+    margin-right: 500px;
+    border-top: 1px dotted #999999;
+    border-bottom: 1px dotted #999999;
+    background-color: #F5F5F5;
+}
+
+#photo {
+    float: left;
+    text-align: center;
+    padding-top:4px;
+    padding-bottom:4px;
+    margin-left: 6px;
+    margin-top:16px;
+    border-top: 1px dotted #999999;
+    border-bottom: 1px dotted #999999;
+    width:185px;
+}
+
+#navi img { 
+    width: 120px;
+    padding: 16px;
+}
+
+#photo img { width: 120px; }
+
+/********************************************/
+/* Navigationsbox: */
+/********************************************/
+
+#navi UL {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	padding-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#navi LI {
+	padding-top: 2px;
+}
+
+/* NAVIGATION  EBENE 1*/
+
+.link1 {
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/navi1.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.link1 A {
+	text-decoration:none;
+	color: #3366CC;
+  	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/leer.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 15px;
+}
+
+.link1 A:visited {
+	color: #3366CC;
+}
+
+.link1 A:hover {
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/hover.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	color: #3366CC;
+}
+
+.link1-act {
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: normal;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/navi1_act.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	font-weight:bold;
+}
+
+.link1-act A {
+	text-decoration:none;
+	color: #3366CC;
+	padding-left: 15px;
+}
+
+.link1-act A:visited {
+	color: #3366CC;
+}
+
+/* NAVIGATION  EBENE 2 */
+
+.link2 {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/navi2.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-left: 15px;
+}
+
+.link2 A {
+	text-decoration:none;
+	color: #3366CC;
+  	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/leer.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 15px;
+}
+
+.link2 A:visited {
+	color: #3366CC;
+}
+
+.link2 A:hover {
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/hover.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	color: #3366CC;
+}
+
+.link2-act {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/navi2_act.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-left: 15px;
+	font-weight: bold;
+}
+
+.link2-act A {
+	text-decoration:none;
+	color: #3366CC;
+	padding-left: 15px;
+}
+
+.link2-act A:visited {
+	color: #3366CC;
+}
+
+/* NAVIGATION  EBENE 3*/
+
+.link3 {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/navi3.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-left: 35px;
+}
+
+.link3 A {
+	text-decoration:none;
+	color: #3366CC;
+  	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/leer.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 15px;
+}
+
+.link3 A:visited {
+	color: #3366CC;
+}
+
+.link3 A:hover {
+  	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/hover.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	color: #3366CC;
+}
+
+.link3-act {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	background-image: url(http://www.physik.uni-leipzig.de/fileadmin/designvorlage/images/navi3_act.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding-left: 35px;
+	font-weight: bold;
+}
+
+.link3-act A {
+	text-decoration:none;
+	color: #3366CC;
+	padding-left: 15px;
+}
+
+.link3-act A:visited {
+	color: #3366CC;
+}
+
+
+
+
+
+
+/***************************/
+/* General element styles: */
+/***************************/
+H1, H2, H3, H4, H5, P, UL, OL, BLOCKQUOTE, SELECT {  font-family: arial, helvetica; color: #000000; font-weight: normal; padding-right: 60px; }
+PRE { font-family: monospace; }
+A { color: #000066; text-decoration: underline; }
+A:hover { color: #660000; }
+FORM { margin: 0px 0px 0px 0px;}
+P, PRE { margin: 0px 0px 0px 0px; }
+P, TD, UL, OL { font-size: 11px; }
+
+
+/******************/
+/* Headers, plain */
+/******************/
+H1 { font-size: 18px; }
+H2 { font-size: 18px; }
+H3 { font-size: 14px; color: #3366CC; font-weight: bold}
+H4 { font-size: 14px; color : #FF3333;}
+H1, H2, H3, H4, H5, H6 { margin: 0px 0px 0px 0px; margin-top: 30px; margin-bottom: 0px; }
+H1.csc-firstHeader, H2.csc-firstHeader, H3.csc-firstHeader, H4.csc-firstHeader, H5.csc-firstHeader, H6.csc-firstHeader { margin-top: 0px; }
+
+/* Headers, with link */
+H1 A, H2 A, H3 A, H4 A, H5 A { color: #000000; text-decoration: none; }
+H2 A {text-decoration: underline;  }
+H3 A { text-decoration: underline; color: #3366CC;}
+H4 A { text-decoration: underline;	color : #FF3333;}
+H1 A:hover, H2 A:hover, H3 A:hover, H4 A:hover, H5 A:hover { text-decoration: underline; }
+
+
+/*******************/
+/* RTE / Bodytext: */
+/*******************/
+#page P { padding-left:20px; padding-top: 10px; font-size: 12px; color: #000000; }
+#page P A { font-weight: bold; color: #3366CC; }
+
+/* RTE / Bulletlists */
+#content UL { margin-right: 0px; padding-right: 0; }
+#content UL LI { 
+    font-size: 12px; 
+    list-style-image: url(http://www.physik.uni-leipzig.de/~nagel/img/liste.gif);
+}
+#content OL { margin-right: 0; padding-right: 0; }
+#content LI { 
+	font-size: 12px;
+	list-style-position: outside;
+	vertical-align: baseline;
+	padding-bottom: 5px;
+}
+
+/* RTE / Table styling */
+TABLE.contenttable { border: 1px #3366CC solid; margin: 10px 0px 10px 0px; width: 85%;}
+TABLE.contenttable TR TD { padding: 0px 3px 0px 3px; }
+TABLE.contenttable TR TD P.bodytext { font-size: 12px;}
+TABLE.contenttable TR { background-color: #F5F5F5; }
+
+
+/**********/
+/* Images */
+/**********/
+
+#content IMG { margin: 0; padding: 0;  }
+
+/* ungenutzte Elemente */
+
+/*Navigationsbereich für Impessum u. Sitemap */
+#navi_oben {
+	height: 27px;
+	text-align: right;
+	font-size: 12px;
+	line-height: 27px;
+	color: #e5e5e5;
+	position: relative;
+	top: -27px;
+	left: 370px;
+	width: 400px;
+}
+
+#navi_oben A {
+	text-decoration: none;
+	color: #e5e5e5;
+	background-image: url(http://www.physik.uni-leipzig.de/images/navi_oben.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-right: 8px;
+	padding-left: 7px;
+}
+
+#impr A {
+	text-decoration: none;
+	color: #e5e5e5;
+}
+
+#tip{
+  width: 760px;
+  height: 20px;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 12px;
+  overflow: hidden;
+  line-height: 20px;
+}
+
+#tip A {
+	text-decoration: none;
+	color: #3366CC;
+	background-image: url(http://www.physik.uni-leipzig.de/images/recommend.gif);
+	background-repeat: no-repeat;
+	padding-left: 23px;
+}
+
+#print A {
+	text-decoration: none;
+	color: #3366CC;
+	background-image: url(http://www.physik.uni-leipzig.de/images/print.gif);
+	background-repeat: no-repeat;
+	padding-left: 22px;
+	padding-bottom: 2px;
+}
+

@@ -1,25 +1,67 @@
 {% extends "base.html" %}
 {% block body %}
 <!-- ABOUT -->
-<h3>Fantastic vim</h3>
-<p>As you can guess by the title of this site, i'am a vim user.
-Her i collect all the vim addon i use, maybe someone find it useful.
+{% filter markdown %}
+#Fantastic vim
+As you can guess by the title of this site, i'am a vim user.
+Here i collect all the vim addon i use, maybe someone find it useful.
 Most of the addons concerning programming, especially C++.
-You can find my vimrc on <a href="https://github.com/Blonck/dotfiles">github</a>.
+You can find my vimrc on [github]("https://github.com/Blonck/dotfiles").
 I try to keep this list up to date.
-</p>
 
-<h4>Vundle</h4>
-<p>The most important addon is <a href="https://github.com/gmarik/Vundle.vim">vundle</a>. It is just wonderful and
+###Vundle
+The most important addon is [vundle]("https://github.com/gmarik/Vundle.vim").
+It is just wonderful and
 makes it very easy to manage all other addons.
 Installing, updating and removing, everything is handled with simple commands.
 If you want to use any vim addon, use this one first.
-</p>
 
-<h4>UltiSnips</h4>
-<p>The second most important addon for me is the snippet enigine <a href="https://github.com/SirVer/ultisnips">UltiSnips</a>,
+After installing Vundle one can install any addon located on github (or any other git repository)
+by adding:  
+
+`Plugin SomeRepository`  
+
+to your vimrc and executing  
+
+`:BundleInstall`  
+
+inside vim. To update all installed addons is even easier. Just execute
+
+`:BundleUpdate`
+
+inside vim and it Vundle will pull all the updates from the corresponding git repositories.
+
+###UltiSnips
+The second most important addon for me is the snippet enigine [UltiSnips]("https://github.com/SirVer/ultisnips"),
 it speeds up writing code or any kind of structured text. Although i use approximately only 5% of its capabilities
 is helps me a lot.
 
-<p>Later more.</p>
+###vim-fugitive
+[Vim-Fuigitive]("https://github.com/tpope/vim-fugitive") is a mighty git wrapper inside vim.
+With it one can handle all the daily workflow things around git in vim.
+The simplest example is to add a file to the staging area and commit it.
+You just have to execute
+
+`:GWrite`
+
+, which will add the current buffer to the staging area and then
+
+`:Gcommit`
+
+will open a new buffer where you can edit the commit message. Just save and close this buffer and
+your commit is ready.
+
+###YouCompleteMe
+This addon does what it says, at least for me. I tries to complete words as-you-type, which is especially useful
+when writing code. Additionally it can use libclang to do a semantic code completion for C/C++ which is the reason I use it.
+For the libclang part the installation is a little bit complicated, but it is worth it. Just have a look [here]("https://github.com/Valloric/YouCompleteMe").
+If you use it together with UltiSnips these 3 lines inside your vimrc are very useful
+
+```let g:UltiSnipsExpandTrigger='<C-l>'```
+
+```let g:UltiSnipsJumpForwardTrigger='<C-j>'```
+
+```let g:UltiSnipsJumpBackwardTrigger='<C-k>'```
+
+{% endfilter %}
 {% endblock %}

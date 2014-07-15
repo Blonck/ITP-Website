@@ -12,7 +12,7 @@ I try to keep this list up to date.
 ###Vundle
 The most important addon is [vundle]("https://github.com/gmarik/Vundle.vim").
 It is just wonderful and
-makes it very easy to manage all other addons.
+makes it easy to manage all other addons.
 Installing, updating and removing, everything is handled with simple commands.
 If you want to use any vim addon, use this one first.
 
@@ -55,7 +55,7 @@ your commit is ready.
 This addon does what it says, at least for me. I tries to complete words as-you-type, which is especially useful
 when writing code. Additionally it can use libclang to do a semantic code completion for C/C++ which is the reason I use it.
 For the libclang part the installation is a little bit complicated, but it is worth it. Just have a look [here]("https://github.com/Valloric/YouCompleteMe").
-If you use it together with UltiSnips these 3 lines inside your vimrc are very useful
+If you use it together with UltiSnips these 3 lines inside your vimrc are useful.
 
 ```let g:UltiSnipsExpandTrigger='<C-l>'```
 
@@ -63,5 +63,41 @@ If you use it together with UltiSnips these 3 lines inside your vimrc are very u
 
 ```let g:UltiSnipsJumpBackwardTrigger='<C-k>'```
 
+### writegood.vim
+[writegood.vim]("https://github.com/davidbeckingsale/writegood.vim") helps if it comes to writing english text.
+It detects duplicated words, highlight use of passive and common "weasel words".
+Just enable it via:
+
+`:WritegoodEnable`
+
+### nerdtree and vim-nerdtree-tabs
+With [nerdtree]("https://github.com/scrooloose/nerdtree") one can navigate through the filesystem inside vim and
+[vim-nerdtree-tabs]("https://github.com/jistr/vim-nerdtree-tabs") integrate it well when working with tabs.
+I use the following mapping to toggle the nerdtree window:
+
+`nnoremap <F4> :NERDTreeTabsToggle<CR>`
+
+### vim-startify
+On startup [vim-startify]("https://github.com/mhinz/vim-startify") shows you your last used files, which helps me a lot.
+But thats not all, it makes it easy to store and load sessions. Sessions are a set of open buffers or tabs.
+To save the current session just execute:
+
+`:SSave NameOfTheSession`
+
+and if you want to load it:
+
+`:SLoad NameOfTheSession`
+
+### vim-colors-solarized
+
+### Conque-Shell
+
+### gundo
+
+### VimOrganizer
+
+### python-mode
+
+### Conque-Shell
 {% endfilter %}
 {% endblock %}

@@ -4,12 +4,16 @@ import flask
 import settings
 from flask import render_template
 from flask.ext.misaka import Misaka
+from flask.ext.bootstrap import Bootstrap
+from flask.ext.moment import Moment
 
 # renders default content pages
 from main import Main
 
 app = flask.Flask(__name__)
-Misaka(app)
+misaka = Misaka(app)
+bootstrap = Bootstrap(app)
+moment = Moment(app)
 app.application_root = settings.root
 
 # Routing

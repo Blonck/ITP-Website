@@ -1,23 +1,23 @@
-{% extends "base.html" %}
-{% block body %}
-<!-- ABOUT -->
+{% extends "base_blog.html" %}
+
+{% block page_content %}
 {% filter markdown %}
+
 #Fantastic vim
-As you can guess by the title of this site, i'am a vim user.
-Here i collect all the vim addon i use, maybe someone find it useful.
-Most of the addons concerning programming, especially C++.
-You can find my vimrc on [github]("https://github.com/Blonck/dotfiles").
-I try to keep this list up to date.
+As you can guess by the title of this site, i'am a vim user. Here i collect
+all the vim addon i use, maybe someone find it useful. Most of the addons
+concerning programming, especially C++. You can find my vimrc on
+[github]("https://github.com/Blonck/dotfiles"). I try to keep this list up to
+date.
 
 ###Vundle
 The most important addon is [vundle]("https://github.com/gmarik/Vundle.vim").
-It is just wonderful and
-makes it easy to manage all other addons.
-Installing, updating and removing, everything is handled with simple commands.
-If you want to use any vim addon, use this one first.
+It is just wonderful and makes it easy to manage all other addons. Installing,
+updating and removing, everything is handled with simple commands. If you want
+to use any vim addon, use this one first.
 
-After installing Vundle one can install any addon located on github (or any other git repository)
-by adding:  
+After installing Vundle one can install any addon located on github (or any
+other git repository) by adding:  
 
 `Plugin SomeRepository`  
 
@@ -29,18 +29,20 @@ inside vim. To update all installed addons is even easier. Just execute
 
 `:BundleUpdate`
 
-inside vim and it Vundle will pull all the updates from the corresponding git repositories.
+inside vim and it Vundle will pull all the updates from the corresponding git
+repositories.
 
 ###UltiSnips
-The second most important addon for me is the snippet enigine [UltiSnips]("https://github.com/SirVer/ultisnips"),
-it speeds up writing code or any kind of structured text. Although i use approximately only 5% of its capabilities
-is helps me a lot.
+The second most important addon for me is the snippet engine
+[UltiSnips]("https://github.com/SirVer/ultisnips"), it speeds up writing code
+or any kind of structured text. Although i use approximately only 5% of its
+capabilities is helps me a lot.
 
 ###vim-fugitive
-[Vim-Fuigitive]("https://github.com/tpope/vim-fugitive") is a mighty git wrapper inside vim.
-With it one can handle all the daily workflow things around git in vim.
-The simplest example is to add a file to the staging area and commit it.
-You just have to execute
+[Vim-Fuigitive]("https://github.com/tpope/vim-fugitive") is a mighty git
+wrapper inside vim. With it one can handle all the daily workflow things
+around git in vim. The simplest example is to add a file to the staging area
+and commit it.  You just have to execute
 
 `:GWrite`
 
@@ -48,38 +50,42 @@ You just have to execute
 
 `:Gcommit`
 
-will open a new buffer where you can edit the commit message. Just save and close this buffer and
-your commit is ready.
+will open a new buffer where you can edit the commit message. Just save and
+close this buffer and your commit is ready.
 
 ###YouCompleteMe
-This addon does what it says, at least for me. I tries to complete words as-you-type, which is especially useful
-when writing code. Additionally it can use libclang to do a semantic code completion for C/C++ which is the reason I use it.
-For the libclang part the installation is a little bit complicated, but it is worth it. Just have a look [here]("https://github.com/Valloric/YouCompleteMe").
-If you use it together with UltiSnips these 3 lines inside your vimrc are useful.
+This addon does what it says, at least for me. I tries to complete words
+as-you-type, which is especially useful when writing code. Additionally it can
+use libclang to do a semantic code completion for C/C++ which is the reason I
+use it.  For the libclang part the installation is a little bit complicated,
+but it is worth it. Just have a look
+[here]("https://github.com/Valloric/YouCompleteMe"). If you use it together
+with UltiSnips these 3 lines inside your vimrc are useful.
 
-```let g:UltiSnipsExpandTrigger='<C-l>'```
-
-```let g:UltiSnipsJumpForwardTrigger='<C-j>'```
-
+```let g:UltiSnipsExpandTrigger='<C-l>'```  
+```let g:UltiSnipsJumpForwardTrigger='<C-j>'```  
 ```let g:UltiSnipsJumpBackwardTrigger='<C-k>'```
 
 ### writegood.vim
-[writegood.vim]("https://github.com/davidbeckingsale/writegood.vim") helps if it comes to writing english text.
-It detects duplicated words, highlight use of passive and common "weasel words".
-Just enable it via:
+[writegood.vim]("https://github.com/davidbeckingsale/writegood.vim") helps if
+it comes to writing English text. It detects duplicated words, highlight use
+of passive and common "weasel words". Just enable it via:
 
 `:WritegoodEnable`
 
 ### nerdtree and vim-nerdtree-tabs
-With [nerdtree]("https://github.com/scrooloose/nerdtree") one can navigate through the filesystem inside vim and
-[vim-nerdtree-tabs]("https://github.com/jistr/vim-nerdtree-tabs") integrate it well when working with tabs.
-I use the following mapping to toggle the nerdtree window:
+With [nerdtree]("https://github.com/scrooloose/nerdtree") one can navigate
+through the filesystem inside vim and
+[vim-nerdtree-tabs]("https://github.com/jistr/vim-nerdtree-tabs") integrate it
+well when working with tabs. I use the following mapping to toggle the
+nerdtree window:
 
 `nnoremap <F4> :NERDTreeTabsToggle<CR>`
 
 ### vim-startify
-On startup [vim-startify]("https://github.com/mhinz/vim-startify") shows you your last used files, which helps me a lot.
-But thats not all, it makes it easy to store and load sessions. Sessions are a set of open buffers or tabs.
+On startup [vim-startify]("https://github.com/mhinz/vim-startify") shows you
+your last used files, which helps me a lot. But thats not all, it makes it
+easy to store and load sessions. Sessions are a set of open buffers or tabs.
 To save the current session just execute:
 
 `:SSave NameOfTheSession`
@@ -89,15 +95,28 @@ and if you want to load it:
 `:SLoad NameOfTheSession`
 
 ### vim-colors-solarized
+[Solarizd]("https://github.com/altercation/vim-colors-solarized") just a nice color scheme i use not
+only for vim, it is also nice for any kind of terminals.
+To toggle the background color a use the following keybinding:
 
-### Conque-Shell
+```call togglebg#map("<F6>")```
 
 ### gundo
+With [gundo]("https://github.com/sjl/gundo.vim") visualize the vim undo tree.
+The last changes are displayed in a tree and one can undo not only the last one.
+To display gundo i use the keybinding:
+
+```nnoremap <F5> :GundoToggle<CR>```
 
 ### VimOrganizer
+[VimOrganizer]("https://github.com/hsitz/VimOrganizer") is a clone of the Org-mode of emacs.
+Although it doesn't implement all of the features of emacs, it is enough to handle existing org files properly.
+This is enough for me.
 
 ### python-mode
+[Python-Mode]("https://github.com/klen/python-mode") is the batteries included python addon for vim.
+It handles static code analysis, refactoring, code completion and on the fly linting of you python code.
 
-### Conque-Shell
+
 {% endfilter %}
 {% endblock %}

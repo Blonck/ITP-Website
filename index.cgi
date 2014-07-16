@@ -1,4 +1,4 @@
-#! python
+#!/usr/bin/python
 import wsgiref.handlers
 from route import app
 

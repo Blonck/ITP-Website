@@ -1,0 +1,10 @@
+##Bootstrap, Markup and Flask
+With a few hours more work with flask, it was relative easy to use
+bootstrap and markdown. Now everything looks a little bit better, although i
+don't like bootsrap to much. Thanks to markdown i don't have to code my
+blogpost in html. Which makes everything much better.
+
+I begin to get familiar with flask, the biggest problem until now is that within
+Linux one has no possibility to get the creation date of a file. This is the
+reason why my blogpost are ordered by the last modification date, which is not
+to bad.
